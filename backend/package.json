@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build:tintas": "ng build --configuration production --base-href /tintas/"
+    "build:tintas": "ng build --configuration production"
   },
   "keywords": [],
   "author": "",
