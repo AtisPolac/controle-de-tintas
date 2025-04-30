@@ -5,21 +5,24 @@ const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0'
 
 
+
+
 // Configura o transportador do nodemailer
 const transporter = nodemailer.createTransport({
-    host: "smtppro.zoho.com", // ex: smtp.gmail.com
-    port: 465,
-    secure: true,
-    auth: {
-      user: "procedimentos@esdeva.com.br",
-      pass: "esd2024@@"
-    }
+  host: process.env.EMAIL_HOST,
+  port: Number(process.env.EMAIL_PORT),
+  secure: process.env.EMAIL_SECURE === "true",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
   });
 
 
