@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "data": "2025-03-21",
+    "tinta": "Magenta",
+    "lote": "L1187",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "66 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12431"
+  },
+  {
+    "id": 2,
+    "data": "2025-03-22",
+    "tinta": "Preto",
+    "lote": "L1114",
+    "pesoBruto": "67 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12374"
+  },
+  {
+    "id": 3,
+    "data": "2025-03-23",
+    "tinta": "Ciano",
+    "lote": "L1163",
+    "pesoBruto": "54 kg",
+    "pesoLiquido": "47 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12440"
+  },
+  {
+    "id": 4,
+    "data": "2025-03-24",
+    "tinta": "Ciano",
+    "lote": "L1144",
+    "pesoBruto": "68 kg",
+    "pesoLiquido": "61 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12386"
+  },
+  {
+    "id": 5,
+    "data": "2025-03-25",
+    "tinta": "Ciano",
+    "lote": "L1104",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "50 kg",
+    "quantidadeAbastecida": "38 L",
+    "matricula": "12435"
+  },
+  {
+    "id": 6,
+    "data": "2025-03-26",
+    "tinta": "Preto",
+    "lote": "L1177",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12402"
+  },
+  {
+    "id": 7,
+    "data": "2025-03-27",
+    "tinta": "Preto",
+    "lote": "L1198",
+    "pesoBruto": "66 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12430"
+  },
+  {
+    "id": 8,
+    "data": "2025-03-28",
+    "tinta": "Magenta",
+    "lote": "L1158",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12388"
+  },
+  {
+    "id": 9,
+    "data": "2025-03-29",
+    "tinta": "Ciano",
+    "lote": "L1138",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "48 kg",
+    "quantidadeAbastecida": "38 L",
+    "matricula": "12405"
+  },
+  {
+    "id": 10,
+    "data": "2025-03-30",
+    "tinta": "Ciano",
+    "lote": "L1190",
+    "pesoBruto": "63 kg",
+    "pesoLiquido": "58 kg",
+    "quantidadeAbastecida": "38 L",
+    "matricula": "12404"
+  },
+  {
+    "id": 11,
+    "data": "2025-03-31",
+    "tinta": "Ciano",
+    "lote": "L1106",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "29 L",
+    "matricula": "12398"
+  },
+  {
+    "id": 12,
+    "data": "2025-04-01",
+    "tinta": "Preto",
+    "lote": "L1143",
+    "pesoBruto": "68 kg",
+    "pesoLiquido": "61 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12422"
+  },
+  {
+    "id": 13,
+    "data": "2025-04-02",
+    "tinta": "Amarelo",
+    "lote": "L1134",
+    "pesoBruto": "58 kg",
+    "pesoLiquido": "54 kg",
+    "quantidadeAbastecida": "36 L",
+    "matricula": "12418"
+  },
+  {
+    "id": 14,
+    "data": "2025-04-03",
+    "tinta": "Preto",
+    "lote": "L1125",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12399"
+  },
+  {
+    "id": 15,
+    "data": "2025-04-04",
+    "tinta": "Magenta",
+    "lote": "L1107",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12370"
+  },
+  {
+    "id": 16,
+    "data": "2025-04-05",
+    "tinta": "Magenta",
+    "lote": "L1190",
+    "pesoBruto": "65 kg",
+    "pesoLiquido": "57 kg",
+    "quantidadeAbastecida": "26 L",
+    "matricula": "12387"
+  },
+  {
+    "id": 17,
+    "data": "2025-04-06",
+    "tinta": "Magenta",
+    "lote": "L1124",
+    "pesoBruto": "52 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12404"
+  },
+  {
+    "id": 18,
+    "data": "2025-04-07",
+    "tinta": "Preto",
+    "lote": "L1104",
+    "pesoBruto": "50 kg",
+    "pesoLiquido": "43 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12398"
+  },
+  {
+    "id": 19,
+    "data": "2025-04-08",
+    "tinta": "Amarelo",
+    "lote": "L1172",
+    "pesoBruto": "58 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12421"
+  },
+  {
+    "id": 20,
+    "data": "2025-04-09",
+    "tinta": "Magenta",
+    "lote": "L1196",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12376"
+  },
+  {
+    "id": 21,
+    "data": "2025-04-10",
+    "tinta": "Ciano",
+    "lote": "L1134",
+    "pesoBruto": "67 kg",
+    "pesoLiquido": "64 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12352"
+  },
+  {
+    "id": 22,
+    "data": "2025-04-11",
+    "tinta": "Magenta",
+    "lote": "L1119",
+    "pesoBruto": "52 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12439"
+  },
+  {
+    "id": 23,
+    "data": "2025-04-12",
+    "tinta": "Magenta",
+    "lote": "L1143",
+    "pesoBruto": "64 kg",
+    "pesoLiquido": "59 kg",
+    "quantidadeAbastecida": "33 L",
+    "matricula": "12395"
+  },
+  {
+    "id": 24,
+    "data": "2025-04-13",
+    "tinta": "Ciano",
+    "lote": "L1198",
+    "pesoBruto": "63 kg",
+    "pesoLiquido": "59 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12377"
+  },
+  {
+    "id": 25,
+    "data": "2025-04-14",
+    "tinta": "Amarelo",
+    "lote": "L1174",
+    "pesoBruto": "70 kg",
+    "pesoLiquido": "64 kg",
+    "quantidadeAbastecida": "29 L",
+    "matricula": "12378"
+  },
+  {
+    "id": 26,
+    "data": "2025-04-15",
+    "tinta": "Magenta",
+    "lote": "L1178",
+    "pesoBruto": "50 kg",
+    "pesoLiquido": "42 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12441"
+  },
+  {
+    "id": 27,
+    "data": "2025-04-16",
+    "tinta": "Preto",
+    "lote": "L1153",
+    "pesoBruto": "66 kg",
+    "pesoLiquido": "60 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12400"
+  },
+  {
+    "id": 28,
+    "data": "2025-04-17",
+    "tinta": "Ciano",
+    "lote": "L1112",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12370"
+  },
+  {
+    "id": 29,
+    "data": "2025-04-18",
+    "tinta": "Preto",
+    "lote": "L1137",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12422"
+  },
+  {
+    "id": 30,
+    "data": "2025-04-19",
+    "tinta": "Amarelo",
+    "lote": "L1151",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "29 L",
+    "matricula": "12427"
+  },
+  {
+    "id": 31,
+    "data": "2025-04-20",
+    "tinta": "Ciano",
+    "lote": "L1127",
+    "pesoBruto": "55 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12369"
+  },
+  {
+    "id": 32,
+    "data": "2025-04-21",
+    "tinta": "Preto",
+    "lote": "L1175",
+    "pesoBruto": "67 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "30 L",
+    "matricula": "12357"
+  },
+  {
+    "id": 33,
+    "data": "2025-04-22",
+    "tinta": "Magenta",
+    "lote": "L1145",
+    "pesoBruto": "54 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "33 L",
+    "matricula": "12362"
+  },
+  {
+    "id": 34,
+    "data": "2025-04-23",
+    "tinta": "Ciano",
+    "lote": "L1159",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "61 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12416"
+  },
+  {
+    "id": 35,
+    "data": "2025-04-24",
+    "tinta": "Preto",
+    "lote": "L1135",
+    "pesoBruto": "50 kg",
+    "pesoLiquido": "43 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12441"
+  },
+  {
+    "id": 36,
+    "data": "2025-04-25",
+    "tinta": "Amarelo",
+    "lote": "L1109",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "47 kg",
+    "quantidadeAbastecida": "33 L",
+    "matricula": "12408"
+  },
+  {
+    "id": 37,
+    "data": "2025-04-26",
+    "tinta": "Amarelo",
+    "lote": "L1140",
+    "pesoBruto": "50 kg",
+    "pesoLiquido": "44 kg",
+    "quantidadeAbastecida": "36 L",
+    "matricula": "12439"
+  },
+  {
+    "id": 38,
+    "data": "2025-04-27",
+    "tinta": "Amarelo",
+    "lote": "L1154",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "54 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12424"
+  },
+  {
+    "id": 39,
+    "data": "2025-04-28",
+    "tinta": "Amarelo",
+    "lote": "L1175",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12356"
+  },
+  {
+    "id": 40,
+    "data": "2025-04-29",
+    "tinta": "Ciano",
+    "lote": "L1195",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "43 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12417"
+  },
+  {
+    "id": 41,
+    "data": "2025-04-30",
+    "tinta": "Preto",
+    "lote": "L1165",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "48 kg",
+    "quantidadeAbastecida": "36 L",
+    "matricula": "12381"
+  },
+  {
+    "id": 42,
+    "data": "2025-05-01",
+    "tinta": "Ciano",
+    "lote": "L1162",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "48 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12378"
+  },
+  {
+    "id": 43,
+    "data": "2025-05-02",
+    "tinta": "Ciano",
+    "lote": "L1153",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12375"
+  },
+  {
+    "id": 44,
+    "data": "2025-05-03",
+    "tinta": "Ciano",
+    "lote": "L1190",
+    "pesoBruto": "66 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12352"
+  },
+  {
+    "id": 45,
+    "data": "2025-05-04",
+    "tinta": "Magenta",
+    "lote": "L1123",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12428"
+  },
+  {
+    "id": 46,
+    "data": "2025-05-05",
+    "tinta": "Amarelo",
+    "lote": "L1141",
+    "pesoBruto": "65 kg",
+    "pesoLiquido": "58 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12352"
+  },
+  {
+    "id": 47,
+    "data": "2025-05-06",
+    "tinta": "Magenta",
+    "lote": "L1197",
+    "pesoBruto": "65 kg",
+    "pesoLiquido": "60 kg",
+    "quantidadeAbastecida": "38 L",
+    "matricula": "12345"
+  },
+  {
+    "id": 48,
+    "data": "2025-05-07",
+    "tinta": "Preto",
+    "lote": "L1105",
+    "pesoBruto": "61 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12391"
+  },
+  {
+    "id": 49,
+    "data": "2025-05-08",
+    "tinta": "Amarelo",
+    "lote": "L1130",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12399"
+  },
+  {
+    "id": 50,
+    "data": "2025-05-09",
+    "tinta": "Preto",
+    "lote": "L1149",
+    "pesoBruto": "52 kg",
+    "pesoLiquido": "46 kg",
+    "quantidadeAbastecida": "36 L",
+    "matricula": "12374"
+  },
+  {
+    "id": 51,
+    "data": "2025-05-10",
+    "tinta": "Amarelo",
+    "lote": "L1191",
+    "pesoBruto": "54 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "39 L",
+    "matricula": "12374"
+  },
+  {
+    "id": 52,
+    "data": "2025-05-11",
+    "tinta": "Amarelo",
+    "lote": "L1138",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12354"
+  },
+  {
+    "id": 53,
+    "data": "2025-05-12",
+    "tinta": "Preto",
+    "lote": "L1199",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12361"
+  },
+  {
+    "id": 54,
+    "data": "2025-05-13",
+    "tinta": "Ciano",
+    "lote": "L1184",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "50 kg",
+    "quantidadeAbastecida": "26 L",
+    "matricula": "12359"
+  },
+  {
+    "id": 55,
+    "data": "2025-05-14",
+    "tinta": "Preto",
+    "lote": "L1102",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12345"
+  },
+  {
+    "id": 56,
+    "data": "2025-05-15",
+    "tinta": "Magenta",
+    "lote": "L1133",
+    "pesoBruto": "64 kg",
+    "pesoLiquido": "56 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12429"
+  },
+  {
+    "id": 57,
+    "data": "2025-05-16",
+    "tinta": "Ciano",
+    "lote": "L1128",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12354"
+  },
+  {
+    "id": 58,
+    "data": "2025-05-17",
+    "tinta": "Preto",
+    "lote": "L1124",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "66 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12393"
+  },
+  {
+    "id": 59,
+    "data": "2025-05-18",
+    "tinta": "Magenta",
+    "lote": "L1100",
+    "pesoBruto": "58 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12422"
+  },
+  {
+    "id": 60,
+    "data": "2025-05-19",
+    "tinta": "Amarelo",
+    "lote": "L1138",
+    "pesoBruto": "66 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12413"
+  },
+  {
+    "id": 61,
+    "data": "2025-05-20",
+    "tinta": "Amarelo",
+    "lote": "L1163",
+    "pesoBruto": "61 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12422"
+  },
+  {
+    "id": 62,
+    "data": "2025-05-21",
+    "tinta": "Ciano",
+    "lote": "L1167",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "39 L",
+    "matricula": "12367"
+  },
+  {
+    "id": 63,
+    "data": "2025-05-22",
+    "tinta": "Ciano",
+    "lote": "L1153",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "50 kg",
+    "quantidadeAbastecida": "26 L",
+    "matricula": "12433"
+  },
+  {
+    "id": 64,
+    "data": "2025-05-23",
+    "tinta": "Ciano",
+    "lote": "L1108",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12384"
+  },
+  {
+    "id": 65,
+    "data": "2025-05-24",
+    "tinta": "Preto",
+    "lote": "L1167",
+    "pesoBruto": "67 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12426"
+  },
+  {
+    "id": 66,
+    "data": "2025-05-25",
+    "tinta": "Magenta",
+    "lote": "L1121",
+    "pesoBruto": "70 kg",
+    "pesoLiquido": "67 kg",
+    "quantidadeAbastecida": "26 L",
+    "matricula": "12406"
+  },
+  {
+    "id": 67,
+    "data": "2025-05-26",
+    "tinta": "Ciano",
+    "lote": "L1187",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12397"
+  },
+  {
+    "id": 68,
+    "data": "2025-05-27",
+    "tinta": "Ciano",
+    "lote": "L1122",
+    "pesoBruto": "64 kg",
+    "pesoLiquido": "58 kg",
+    "quantidadeAbastecida": "38 L",
+    "matricula": "12412"
+  },
+  {
+    "id": 69,
+    "data": "2025-05-28",
+    "tinta": "Preto",
+    "lote": "L1124",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12404"
+  },
+  {
+    "id": 70,
+    "data": "2025-05-29",
+    "tinta": "Amarelo",
+    "lote": "L1104",
+    "pesoBruto": "52 kg",
+    "pesoLiquido": "46 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12438"
+  },
+  {
+    "id": 71,
+    "data": "2025-05-30",
+    "tinta": "Ciano",
+    "lote": "L1157",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12415"
+  },
+  {
+    "id": 72,
+    "data": "2025-05-31",
+    "tinta": "Ciano",
+    "lote": "L1123",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12434"
+  },
+  {
+    "id": 73,
+    "data": "2025-06-01",
+    "tinta": "Magenta",
+    "lote": "L1169",
+    "pesoBruto": "70 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12347"
+  },
+  {
+    "id": 74,
+    "data": "2025-06-02",
+    "tinta": "Ciano",
+    "lote": "L1176",
+    "pesoBruto": "70 kg",
+    "pesoLiquido": "64 kg",
+    "quantidadeAbastecida": "28 L",
+    "matricula": "12390"
+  },
+  {
+    "id": 75,
+    "data": "2025-06-03",
+    "tinta": "Magenta",
+    "lote": "L1198",
+    "pesoBruto": "65 kg",
+    "pesoLiquido": "58 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12418"
+  },
+  {
+    "id": 76,
+    "data": "2025-06-04",
+    "tinta": "Magenta",
+    "lote": "L1110",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "57 kg",
+    "quantidadeAbastecida": "25 L",
+    "matricula": "12377"
+  },
+  {
+    "id": 77,
+    "data": "2025-06-05",
+    "tinta": "Ciano",
+    "lote": "L1116",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "56 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12396"
+  },
+  {
+    "id": 78,
+    "data": "2025-06-06",
+    "tinta": "Amarelo",
+    "lote": "L1199",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "45 kg",
+    "quantidadeAbastecida": "29 L",
+    "matricula": "12426"
+  },
+  {
+    "id": 79,
+    "data": "2025-06-07",
+    "tinta": "Magenta",
+    "lote": "L1165",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "44 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12437"
+  },
+  {
+    "id": 80,
+    "data": "2025-06-08",
+    "tinta": "Ciano",
+    "lote": "L1176",
+    "pesoBruto": "67 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12414"
+  },
+  {
+    "id": 81,
+    "data": "2025-06-09",
+    "tinta": "Magenta",
+    "lote": "L1100",
+    "pesoBruto": "66 kg",
+    "pesoLiquido": "63 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12385"
+  },
+  {
+    "id": 82,
+    "data": "2025-06-10",
+    "tinta": "Ciano",
+    "lote": "L1185",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "66 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12346"
+  },
+  {
+    "id": 83,
+    "data": "2025-06-11",
+    "tinta": "Amarelo",
+    "lote": "L1162",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "54 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12436"
+  },
+  {
+    "id": 84,
+    "data": "2025-06-12",
+    "tinta": "Magenta",
+    "lote": "L1119",
+    "pesoBruto": "56 kg",
+    "pesoLiquido": "53 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12391"
+  },
+  {
+    "id": 85,
+    "data": "2025-06-13",
+    "tinta": "Preto",
+    "lote": "L1193",
+    "pesoBruto": "69 kg",
+    "pesoLiquido": "61 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12384"
+  },
+  {
+    "id": 86,
+    "data": "2025-06-14",
+    "tinta": "Magenta",
+    "lote": "L1156",
+    "pesoBruto": "62 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "30 L",
+    "matricula": "12429"
+  },
+  {
+    "id": 87,
+    "data": "2025-06-15",
+    "tinta": "Ciano",
+    "lote": "L1142",
+    "pesoBruto": "65 kg",
+    "pesoLiquido": "59 kg",
+    "quantidadeAbastecida": "27 L",
+    "matricula": "12431"
+  },
+  {
+    "id": 88,
+    "data": "2025-06-16",
+    "tinta": "Preto",
+    "lote": "L1121",
+    "pesoBruto": "64 kg",
+    "pesoLiquido": "59 kg",
+    "quantidadeAbastecida": "40 L",
+    "matricula": "12417"
+  },
+  {
+    "id": 89,
+    "data": "2025-06-17",
+    "tinta": "Ciano",
+    "lote": "L1138",
+    "pesoBruto": "50 kg",
+    "pesoLiquido": "46 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12409"
+  },
+  {
+    "id": 90,
+    "data": "2025-06-18",
+    "tinta": "Amarelo",
+    "lote": "L1171",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "52 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12367"
+  },
+  {
+    "id": 91,
+    "data": "2025-06-19",
+    "tinta": "Preto",
+    "lote": "L1166",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "47 kg",
+    "quantidadeAbastecida": "36 L",
+    "matricula": "12433"
+  },
+  {
+    "id": 92,
+    "data": "2025-06-20",
+    "tinta": "Preto",
+    "lote": "L1187",
+    "pesoBruto": "52 kg",
+    "pesoLiquido": "47 kg",
+    "quantidadeAbastecida": "30 L",
+    "matricula": "12426"
+  },
+  {
+    "id": 93,
+    "data": "2025-06-21",
+    "tinta": "Amarelo",
+    "lote": "L1113",
+    "pesoBruto": "68 kg",
+    "pesoLiquido": "62 kg",
+    "quantidadeAbastecida": "32 L",
+    "matricula": "12422"
+  },
+  {
+    "id": 94,
+    "data": "2025-06-22",
+    "tinta": "Amarelo",
+    "lote": "L1144",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "48 kg",
+    "quantidadeAbastecida": "30 L",
+    "matricula": "12393"
+  },
+  {
+    "id": 95,
+    "data": "2025-06-23",
+    "tinta": "Preto",
+    "lote": "L1185",
+    "pesoBruto": "57 kg",
+    "pesoLiquido": "51 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12393"
+  },
+  {
+    "id": 96,
+    "data": "2025-06-24",
+    "tinta": "Ciano",
+    "lote": "L1181",
+    "pesoBruto": "59 kg",
+    "pesoLiquido": "54 kg",
+    "quantidadeAbastecida": "37 L",
+    "matricula": "12403"
+  },
+  {
+    "id": 97,
+    "data": "2025-06-25",
+    "tinta": "Magenta",
+    "lote": "L1157",
+    "pesoBruto": "53 kg",
+    "pesoLiquido": "49 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12427"
+  },
+  {
+    "id": 98,
+    "data": "2025-06-26",
+    "tinta": "Magenta",
+    "lote": "L1132",
+    "pesoBruto": "64 kg",
+    "pesoLiquido": "56 kg",
+    "quantidadeAbastecida": "31 L",
+    "matricula": "12345"
+  },
+  {
+    "id": 99,
+    "data": "2025-06-27",
+    "tinta": "Amarelo",
+    "lote": "L1117",
+    "pesoBruto": "60 kg",
+    "pesoLiquido": "55 kg",
+    "quantidadeAbastecida": "35 L",
+    "matricula": "12415"
+  },
+  {
+    "id": 100,
+    "data": "2025-06-28",
+    "tinta": "Magenta",
+    "lote": "L1177",
+    "pesoBruto": "51 kg",
+    "pesoLiquido": "43 kg",
+    "quantidadeAbastecida": "34 L",
+    "matricula": "12351"
+  }
+]

@@ -1,0 +1,126 @@
+.card {
+    .card-body.dashboard-card {
+      padding: 18px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .user-group {
+    img {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      z-index: 2;
+      transition: all 0.1s ease-in-out;
+      border: 2px solid var(--bs-white);
+      + img {
+        margin-left: -14px;
+      }
+      &:hover {
+        z-index: 5;
+      }
+    }
+  }
+  
+  .badge-circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 16px;
+    text-align: left;
+    overflow: hidden;
+    text-align: center; // aqui
+    vertical-align: middle; // adiciona isso também
+    text-overflow: ellipsis;
+  }
+  
+ .table thead th {
+  background-color: #343a40;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 6px !important;
+  font-size: 0.75rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  height: 20px !important;
+  max-height: 20px !important;
+  vertical-align: middle;
+  overflow: hidden;
+  word-break: break-word;
+  text-align: center;
+  vertical-align: middle;
+}
+  
+  .table tbody td {
+    background-color: #fff;
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  
+  .sort-icon {
+    margin-left: 6px;
+    font-size: 0.8rem;
+  }
+
+  th.col-id { width: 10%; }
+  th.col-dataRegistro { width: 20%; }
+  th.col-tinta { width: 15%; }
+  th.col-lote { width: 15%; }
+  th.col-pesoBruto { width: 10%; }
+  th.col-pesoLiquido { width: 10%; }
+  th.col-quantidadeAbastecida { width: 10%; }
+  th.col-embalagem { width: 15%; }
+  th.col-user { width: 25%; }
+
+  th.col-hora { width: 10%; }
+  th.col-yellow { width: 10%; }
+  th.col-cyan { width: 10%; }
+  th.col-magenta { width: 10%; }
+  th.col-black { width: 10%; }
+  th.col-datamed { width: 15%; }
+
+  .label-amarelo {
+    background-color: #FFEB3B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+  }
+  .label-ciano {
+    background-color: #03A9F4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .label-magenta {
+    background-color: #E91E63;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .label-preto {
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  

@@ -1,0 +1,48 @@
+<div class="auth-main">
+  <div class="auth-wrapper v3">
+    <div class="auth-form">
+      <div class="auth-header">
+        <a href="//192.168.0.112/intranet/"><img src="assets/images/logo.png" alt="logo" width="160" height="60" /></a>
+      </div>
+      <h1>Controle de Tintas</h1>
+      <div class="card my-5">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-end mb-4">
+            <h3 class="mb-0"><b>Login</b></h3>
+            <a [routerLink]="['/register']" class="link-primary">Não tem uma conta?</a>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label" for="user">Email</label>
+            <input type="email" [(ngModel)]="email" class="form-control" id="email" placeholder="Email" value="" (keydown.enter)="login()" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label" for="password">Senha</label>
+            <input type="password" [(ngModel)]="password" class="form-control" id="password" placeholder="Senha" value="" (keydown.enter)="login()" />
+          </div>
+          <div class="d-flex mt-1 justify-content-between">
+            <h5 class="text-secondary f-w-400"><a [routerLink]="['/esqueceu-senha']">Esqueceu a senha?</a></h5>
+          </div>
+          <div class="d-flex mt-1 justify-content-between">
+          </div>
+          <div class="d-grid mt-4">
+            <button type="button" (click)="login()" class="btn btn-primary">Login</button>
+          </div>
+          <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+        </div>
+      </div>
+      <div class="auth-footer row">
+        <div class="col my-1">
+          <p class="m-0">
+            Copyright &copy;
+            <a href="https://www.esdeva.com.br" target="_blank">Esdeva Indústria Gráfica</a>
+          </p>
+        </div>
+        <div class="col-auto my-1">
+          <ul class="list-inline footer-link mb-0">
+            <li class="list-inline-item"><a href="https://wa.me/5532984446243?text=Ol%C3%A1!%20Estou%20em%20busca%20de%20melhorias%20e%20controle%20para%20meu%20neg%C3%B3cio.%20Como%20voc%C3%AA%20pode%20me%20ajudar%20a%20alcan%C3%A7ar%20isso%3F" target="_blank">By Double A Solutions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

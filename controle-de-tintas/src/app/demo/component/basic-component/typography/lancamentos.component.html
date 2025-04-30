@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="container">
+  
+  <div class="col-md-12" style="position:absolute; left:-9999px; top:-9999px;" #gaugeRoot>
+    <app-ink-consumption-gauge />
+  </div>
+  <!-- Botões para alternar entre os formulários -->
+  <div class="btn-group mb-4" role="group">
+    <button type="button" class="btn btn-outline-primary"
+            [class.active]="selectedForm === 'abastecimento'"
+            (click)="mostrarFormulario('abastecimento')">
+      Lançamento de Abastecimento
+    </button>
+    <button type="button" class="btn btn-outline-primary"
+            [class.active]="selectedForm === 'medicao'"
+            (click)="mostrarFormulario('medicao')">
+      Lançamento de Medição de Nível e Estoque
+    </button>
+  </div>
+
+  <!-- Formulário de lançamento de abastecimento -->
+  <div *ngIf="selectedForm === 'abastecimento'" class="form-container">
+    <app-card cardTitle="Formulário de Abastecimento de Tinta">
+      <form (ngSubmit)="enviarFormularioAbastecimento($event)"> 
+        <!-- Tinta para o abastecimento -->
+        <div class="mb-3">
+          <label class="form-label">Tinta para o Abastecimento</label>
+          <div class="d-flex align-items-center">
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="tinta2171" name="tinta" value="AMARELO" [(ngModel)]="abastecimento.tinta" required>
+              <label class="form-check-label label-2171" for="tinta2171">2171 AMARELO</label>
+            </div>
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="tinta2172" name="tinta" value="MAGENTA" [(ngModel)]="abastecimento.tinta" required>
+              <label class="form-check-label label-2172" for="tinta2172">2172 MAGENTA</label>
+            </div>
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="tinta2173" name="tinta" value="CIANO" [(ngModel)]="abastecimento.tinta" required>
+              <label class="form-check-label label-2173" for="tinta2173">2173 CIANO</label>
+            </div>
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="tinta2174" name="tinta" value="PRETO" [(ngModel)]="abastecimento.tinta" required>
+              <label class="form-check-label label-2174" for="tinta2174">2174 PRETO</label>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Peso bruto do rótulo -->
+        <div class="mb-3">
+          <label for="inputPesoBruto" class="form-label">Peso Bruto do Rótulo (kg)</label>
+          <input type="number" min="0" class="form-control" id="inputPesoBruto" name="pesoBruto" [(ngModel)]="abastecimento.pesoBruto" required placeholder="Digite o peso bruto do rótulo">
+        </div>
+
+        <!-- Peso líquido do rótulo -->
+        <div class="mb-3">
+          <label for="inputPesoLiquido" class="form-label">Peso Líquido do Rótulo (kg)</label>
+          <input type="number" min="0" class="form-control" id="inputPesoLiquido" name="pesoLiquido" [(ngModel)]="abastecimento.pesoLiquido" required placeholder="Digite o peso líquido do rótulo">
+        </div>
+
+        <!-- Quantidade abastecida -->
+        <div class="mb-3">
+          <label for="inputQuantidadeAbastecida" class="form-label">Quantidade Abastecida (kg)</label>
+          <input type="number" min="0" class="form-control" id="inputQuantidadeAbastecida" name="quantidadeAbastecida" [(ngModel)]="abastecimento.quantidadeAbastecida" required placeholder="Digite a quantidade abastecida">
+        </div>
+
+        <!-- Embalagem do produto -->
+        <div class="mb-3">
+          <label class="form-label">Qual a Embalagem do Produto?</label>
+          <div class="d-flex align-items-center">
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="embalagemTambores" name="embalagem" value="TAMBOR" [(ngModel)]="abastecimento.embalagem" required>
+              <label class="form-check-label" for="embalagemTambores">TAMBOR (180 KG POR TAMBOR)</label>
+            </div>
+            <div class="form-check mx-3">
+              <input class="form-check-input" type="radio" id="embalagemGoodpacks" name="embalagem" value="BAG" [(ngModel)]="abastecimento.embalagem" required>
+              <label class="form-check-label" for="embalagemGoodpacks">GOOD PACK´S (700 KG POR BAG)</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lote do produto -->
+        <div class="mb-3">
+          <label for="inputLote" class="form-label">Qual o Lote do Produto?</label>
+          <input type="text" class="form-control" id="inputLote" name="lote" [(ngModel)]="abastecimento.lote" required placeholder="Digite o lote do produto">
+        </div>
+
+        <!-- Peso do descarte -->
+        <div class="mb-3">
+          <label for="inputPesoDescarte" class="form-label">Peso do Descarte (kg)</label>
+          <input type="number" min="0" class="form-control" id="inputPesoDescarte" name="pesoDescarte" [(ngModel)]="abastecimento.pesoDescarte" placeholder="Digite o peso do descarte">
+        </div>
+
+
+        <!-- Observações sobre a Central de Tintas -->
+        <div class="mb-3">
+          <label class="form-label">Observações sobre a Central de Tintas</label>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="centralLimpa" [(ngModel)]="abastecimento.centralLimpa" name="centralLimpa">
+            <label class="form-check-label" for="centralLimpa">Central está limpa?</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="muitosTambores" [(ngModel)]="abastecimento.muitosTambores" name="muitosTambores">
+            <label class="form-check-label" for="muitosTambores">Temos muitos tambores na central?</label>
+          </div>
+        </div>
+
+
+        <!-- Observações sobre a central de tintas -->
+        <div class="mb-3">
+          <label for="inputObservacoes" class="form-label">Observações sobre a Central de Tintas</label>
+          <textarea class="form-control" id="inputObservacoes" name="observacoes" [(ngModel)]="abastecimento.observacoes" placeholder="Descreva detalhes sobre a central de tintas"></textarea>
+        </div>
+        <!-- Avaliação da central -->
+        <div class="mb-3">
+          <label class="form-label">Avalie a central de tintas</label>
+          <div class="d-flex align-items-center">
+            <!-- Gerar 10 joinhas -->
+            <div *ngFor="let _ of [].constructor(10); let i = index" class="mx-1">
+              <label class="form-label">{{ i + 1 }}</label>
+              <button type="button" class="btn"
+                      [ngClass]="{'btn-primary': i < avaliacao, 'btn-outline-primary': i >= avaliacao}"
+                      (click)="avaliarCentral(i + 1)">
+                <i class="fas fa-thumbs-up"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Botão de envio -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </app-card>
+  </div>
+
+  <!-- Formulário de lançamento de medição de nível -->
+  <div *ngIf="selectedForm === 'medicao'" class="form-container">
+    <app-card cardTitle="Formulário de Medição de Nível e Estoque de Tinta">
+      <form (ngSubmit)="enviarFormularioMedicao($event)">
+        <div class="mb-3">
+          <label for="inputNivelTinta" class="form-label">Nível de Tinta</label>
+          <div class="d-flex align-items-center">
+            <div class="form-check mx-2">
+              <label class="form-label text-dark px-2 rounded" style="background-color: #FFF200;">Tinta Amarela</label>
+              <input type="number" min="0" class="form-control" id="yellow" name="yellow" [(ngModel)]="medicao.yellow" required placeholder="Digite o nível de tinta">
+            </div>
+            <div class="form-check mx-2">
+              <label class="form-label text-white px-2 rounded" style="background-color: #EC008C;">Tinta Magenta</label>
+              <input type="number" min="0" class="form-control" id="magenta" name="magenta" [(ngModel)]="medicao.magenta" required placeholder="Digite o nível de tinta">
+            </div>
+            <div class="form-check mx-2">
+              <label class="form-label text-white px-2 rounded" style="background-color: #00AEEF;">Tinta Ciano</label>
+              <input type="number" min="0" class="form-control" id="cyan" name="cyan" [(ngModel)]="medicao.cyan" required placeholder="Digite o nível de tinta">
+            </div>
+            <div class="form-check mx-2">
+              <label class="form-label text-white px-2 rounded" style="background-color: #000;">Tinta Preta</label>
+              <input type="number" min="0" class="form-control" id="black" name="black" [(ngModel)]="medicao.black" required placeholder="Digite o nível de tinta">
+            </div>
+          </div>
+
+          <!-- Estoque de Tintas - OFFSET -->
+          <div class="mb-4">
+            <label for="inputEstoqueOffset" class="form-label">Estoque de tintas - <strong>OFFSET</strong></label>
+            <div class="d-flex align-items-center">
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-dark px-2 rounded" style="background-color: #FFF200;">Tinta Amarela</label>
+                <input type="number" min="0" class="form-control" name="offset_amarelo" [(ngModel)]="medicao.estoque.offset.amarelo" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #EC008C;">Tinta Magenta</label>
+                <input type="number" min="0" class="form-control" name="offset_magenta" [(ngModel)]="medicao.estoque.offset.magenta" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #00AEEF;">Tinta Ciano</label>
+                <input type="number" min="0" class="form-control" name="offset_ciano" [(ngModel)]="medicao.estoque.offset.ciano" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #000;">Tinta Preta</label>
+                <input type="number" min="0" class="form-control" name="offset_preto" [(ngModel)]="medicao.estoque.offset.preto" required placeholder="Digite o estoque de tinta">
+              </div>
+            </div>
+          </div>
+
+          <!-- Estoque de Tintas - PLANA -->
+          <div class="mb-4">
+            <label for="inputEstoquePlanas" class="form-label">Estoque de tintas - <strong>PLANA</strong></label>
+            <div class="d-flex align-items-center">
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-dark px-2 rounded" style="background-color: #FFF200;">Tinta Amarela</label>
+                <input type="number" min="0" class="form-control" name="plana_amarelo" [(ngModel)]="medicao.estoque.plana.amarelo" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #EC008C;">Tinta Magenta</label>
+                <input type="number" min="0" class="form-control" name="plana_magenta" [(ngModel)]="medicao.estoque.plana.magenta" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #00AEEF;">Tinta Ciano</label>
+                <input type="number" min="0" class="form-control" name="plana_ciano" [(ngModel)]="medicao.estoque.plana.ciano" required placeholder="Digite o estoque de tinta">
+              </div>
+              <div class="form-check mx-2 mb-2">
+                <label class="form-label text-white px-2 rounded" style="background-color: #000;">Tinta Preta</label>
+                <input type="number" min="0" class="form-control" name="plana_preto" [(ngModel)]="medicao.estoque.plana.preto" required placeholder="Digite o estoque de tinta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label">Hora da medição</label>
+          <input type="time" class="form-control" id="date" name="hora" [(ngModel)]="medicao.hora" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </app-card>
+  </div>
+  <!-- Modal de carregamento -->
+  <div *ngIf="carregando" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="spinner"></div>
+      <p>Processando registro...</p>
+    </div>
+  </div>
+</div>
+

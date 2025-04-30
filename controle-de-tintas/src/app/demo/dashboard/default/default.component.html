@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-ink-consumption-gauge />
+  </div>
+  <!-- Indicativo de consumo por hora -->
+  <div *ngIf="avgConsumption" class="mt-4 text-center">
+    <h5>Consumo médio de tinta (kg/h) nas últimas 12h</h5>
+    <div class="d-flex justify-content-center gap-4">
+      <div>Amarela: {{ avgConsumption.yellow | number:'1.3-3':'pt-BR' }} kg</div>
+      <div>Magenta: {{ avgConsumption.magenta | number:'1.3-3':'pt-BR' }} kg</div>
+      <div>Ciano: {{ avgConsumption.cyan | number:'1.3-3':'pt-BR' }} kg</div>
+      <div>Preto: {{ avgConsumption.black | number:'1.3-3':'pt-BR' }} kg</div>
+    </div>
+  </div>
+</div>

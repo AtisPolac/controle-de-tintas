@@ -1,0 +1,60 @@
+/**======================================================================
+=========================================================================
+Template Name: MAntis Angular - Angular Admin Template
+Author: codedThemes
+Support: https://codedthemes.support-hub.io/
+File: style.css
+=========================================================================
+=================================================================================== */
+
+// main framework
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/variables-dark';
+
+@import 'scss/settings/color-variables';
+@import 'scss/settings/theme-variables';
+@import 'scss/settings/bootstrap-variables';
+
+// bootstrap import
+@import 'scss/bootstrap/bootstrap.scss';
+@import 'node_modules/ngx-toastr/toastr.css';
+
+@import 'node_modules/bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/utilities/api';
+
+// main framework
+@import 'scss/themes/generic.scss';
+@import 'scss/themes/general.scss';
+
+@import 'scss/themes/components/components.scss';
+
+// theme
+@import 'scss/themes/layouts/menu/sidebar.scss';
+@import 'scss/themes/layouts/navbar/navbar.scss';
+@import 'scss/themes/layouts/pc-common.scss';
+@import 'scss/themes/layouts/breadcrumb/breadcrumb.scss';
+@import 'scss/themes/layouts/footer/footer.scss';
+
+@import 'scss/themes/preset-style.scss';
+
+
+/* Define a posição da div toast-container para ser relativa ao viewport */
+.toast-container {
+    position: fixed;  /* Fixa a posição da container no viewport */
+    top: 0;           /* Ajuste conforme necessário */
+    right: 0;         /* Ajuste conforme necessário */
+    z-index: 9999;    /* Garante que a toast fique sobre outros elementos */
+  }
+  
+  /* Ajuste adicional para a posição dos toasts */
+  .toast-top-right {
+    top: 20px;  /* Ajuste o valor para a distância que você deseja do topo */
+    right: 20px; /* Ajuste o valor para a distância que você deseja da direita */
+  }
+  
+  .toast-bottom-right {
+    bottom: 20px;  /* Ajuste o valor para a distância que você deseja da parte inferior */
+    right: 20px;   /* Ajuste o valor para a distância que você deseja da direita */
+  }
+  

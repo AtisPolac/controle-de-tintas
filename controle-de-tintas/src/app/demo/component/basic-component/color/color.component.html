@@ -1,0 +1,249 @@
+<div container>
+  <div class="col-12">
+    <h5 class="mb-3">Abastecimentos, Medições e Estoques</h5>
+
+    <!-- Botões de Alternância -->
+    <div class="mb-3 btn-group" role="group">
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="tabelaSelecionada==='abastecimento' ? 'btn-primary' : 'btn-outline-primary'"
+        (click)="trocarTabela('abastecimento')"
+      >
+        Abastecimentos
+      </button>
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="tabelaSelecionada==='medicao' ? 'btn-secondary' : 'btn-outline-secondary'"
+        (click)="trocarTabela('medicao')"
+      >
+        Medições
+      </button>
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="tabelaSelecionada==='offset' ? 'btn-info' : 'btn-outline-info'"
+        (click)="trocarTabela('offset')"
+      >
+        Estoque Offset
+      </button>
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="tabelaSelecionada==='plana' ? 'btn-warning' : 'btn-outline-warning'"
+        (click)="trocarTabela('plana')"
+      >
+        Estoque Plana
+      </button>
+    </div>
+    
+    <!-- Tabela de Abastecimentos -->
+    <div class="card tbl-card" *ngIf="tabelaSelecionada === 'abastecimento'">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0 w-100" style="min-width: 100%;">
+          <thead>
+            <tr>
+              <th class="col-id" (click)="ordenar('id')" style="padding: 10px;">
+                Nº&nbsp;{{ ordemColuna === 'id' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding: 10px;">
+                Data&nbsp;{{ ordemColuna === 'dataRegistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-tinta" (click)="ordenar('tinta')" style="padding: 10px;">
+                Tinta&nbsp;{{ ordemColuna === 'tinta' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-lote" (click)="ordenar('lote')" style="padding: 10px;">
+                Lote&nbsp;{{ ordemColuna === 'lote' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-pesoBruto" (click)="ordenar('pesoBruto')" style="padding: 10px;">
+                Peso Bruto&nbsp;{{ ordemColuna === 'pesoBruto' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th (click)="ordenar('pesoLiquido')" style="padding: 10px;">
+                Peso Líquido&nbsp;{{ ordemColuna === 'pesoLiquido' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-quantidadeAbastecida" (click)="ordenar('quantidadeAbastecida')" style="padding: 10px;">
+                Qtd Abastecida&nbsp;{{ ordemColuna === 'quantidadeAbastecida' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-embalagem" (click)="ordenar('embalagem')" style="padding: 10px;">
+                Embalagem&nbsp;{{ ordemColuna === 'embalagem' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-user" (click)="ordenar('user')" style="padding: 10px;">
+                Colaborador&nbsp;{{ ordemColuna === 'user' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of abastecimentos.slice((paginaAtual - 1) * 50, paginaAtual * 50)">
+              <td >{{ item.id }}</td>
+              <td>{{ item.dataRegistro | date:'dd/MM/yyyy HH:mm' }}</td>
+              <td>
+                <span [ngClass]="classeDaTinta(item.tinta)">
+                  {{ item.tinta }}
+                </span>
+              </td>
+              <td>{{ item.lote }}</td>
+              <td>{{ item.pesoBruto }}</td>
+              <td>{{ item.pesoLiquido }}</td>
+              <td>{{ item.quantidadeAbastecida }}</td>
+              <td>{{ item.embalagem }}</td>
+              <td>{{ item.user }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Tabela de Medições -->
+    <div class="card tbl-card" *ngIf="tabelaSelecionada === 'medicao'">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr>
+              <th class="col-id" style="padding: 10px;" (click)="ordenar('id')">
+                Nº&nbsp;{{ ordemColuna === 'id' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-datamed" style="padding: 10px;" (click)="ordenar('dataRegistro')">
+                Data&nbsp;{{ ordemColuna === 'dataRegistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-hora" style="padding: 10px;" (click)="ordenar('hora')">
+                Hora&nbsp;{{ ordemColuna === 'hora' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-yellow" style="padding: 10px;" (click)="ordenar('yellow')">
+                Amarelo&nbsp;{{ ordemColuna === 'yellow' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-magenta" style="padding: 10px;" (click)="ordenar('magenta')">
+                Magenta&nbsp;{{ ordemColuna === 'magenta' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-cyan" style="padding: 10px;" (click)="ordenar('cyan')">
+                Ciano&nbsp;{{ ordemColuna === 'cyan' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-black" style="padding: 10px;" (click)="ordenar('black')">
+                Preto&nbsp;{{ ordemColuna === 'black' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+              <th class="col-user" style="padding: 10px;" (click)="ordenar('user')">
+                Colaborador&nbsp;{{ ordemColuna === 'user' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of medicoes.slice((paginaAtual - 1) * 50, paginaAtual * 50)">
+              <td style="padding: 10px;">{{ item.id }}</td>
+              <td style="padding: 10px;">{{ item.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding: 10px;">{{ item.hora }}</td>
+              <td style="padding: 10px;">{{ item.yellow }}</td>
+              <td style="padding: 10px;">{{ item.magenta }}</td>
+              <td style="padding: 10px;">{{ item.cyan }}</td>
+              <td style="padding: 10px;">{{ item.black }}</td>
+              <td style="padding: 10px;">{{ item.user }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Estoque Offset -->
+    <div class="card tbl-card" *ngIf="tabelaSelecionada === 'offset'">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0 w-100">
+          <thead>
+            <tr>
+              <th class="col-id" (click)="ordenar('id')" style="padding:10px;">
+                # {{ ordemColuna==='id'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding:10px;">
+                Data {{ ordemColuna==='dataRegistro'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-hora" (click)="ordenar('hora')" style="padding:10px;">
+                Hora {{ ordemColuna==='hora'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-amarelo" (click)="ordenar('amarelo')" style="padding:10px;">
+                Amarelo {{ ordemColuna==='amarelo'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-magenta" (click)="ordenar('magenta')" style="padding:10px;">
+                Magenta {{ ordemColuna==='magenta'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-ciano" (click)="ordenar('ciano')" style="padding:10px;">
+                Ciano {{ ordemColuna==='ciano'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-preto" (click)="ordenar('preto')" style="padding:10px;">
+                Preto {{ ordemColuna==='preto'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-user" (click)="ordenar('user')" style="padding:10px;">
+                Colaborador {{ ordemColuna==='user'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let e of estoquesOffset.slice((paginaAtual-1)*50, paginaAtual*50)">
+              <td style="padding:10px;">{{ e.id }}</td>
+              <td style="padding:10px;">{{ e.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding:10px;">{{ e.hora }}</td>
+              <td style="padding:10px;">{{ e.amarelo }}</td>
+              <td style="padding:10px;">{{ e.magenta }}</td>
+              <td style="padding:10px;">{{ e.ciano }}</td>
+              <td style="padding:10px;">{{ e.preto }}</td>
+              <td style="padding:10px;">{{ e.user }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Estoque Plana -->
+    <div class="card tbl-card" *ngIf="tabelaSelecionada === 'plana'">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0 w-100">
+          <thead>
+            <tr>
+              <th class="col-id" (click)="ordenar('id')" style="padding:10px;">
+                # {{ ordemColuna==='id'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding:10px;">
+                Data {{ ordemColuna==='dataRegistro'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-hora" (click)="ordenar('hora')" style="padding:10px;">
+                Hora {{ ordemColuna==='hora'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-amarelo" (click)="ordenar('amarelo')" style="padding:10px;">
+                Amarelo {{ ordemColuna==='amarelo'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-magenta" (click)="ordenar('magenta')" style="padding:10px;">
+                Magenta {{ ordemColuna==='magenta'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-ciano" (click)="ordenar('ciano')" style="padding:10px;">
+                Ciano {{ ordemColuna==='ciano'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-preto" (click)="ordenar('preto')" style="padding:10px;">
+                Preto {{ ordemColuna==='preto'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+              <th class="col-user" (click)="ordenar('user')" style="padding:10px;">
+                Colaborador {{ ordemColuna==='user'? (ordemAscendente?'▲':'▼') : '' }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let e of estoquesPlana.slice((paginaAtual-1)*50, paginaAtual*50)">
+              <td style="padding:10px;">{{ e.id }}</td>
+              <td style="padding:10px;">{{ e.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding:10px;">{{ e.hora }}</td>
+              <td style="padding:10px;">{{ e.amarelo }}</td>
+              <td style="padding:10px;">{{ e.magenta }}</td>
+              <td style="padding:10px;">{{ e.ciano }}</td>
+              <td style="padding:10px;">{{ e.preto }}</td>
+              <td style="padding:10px;">{{ e.user }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- Paginação -->
+    <div class="mt-3 d-flex justify-content-between">
+      <button class="btn btn-outline-secondary" (click)="paginaAnterior()" [disabled]="paginaAtual === 1">Anterior</button>
+      <span>Página {{ paginaAtual }} de {{ totalPaginas }}</span>
+      <button class="btn btn-outline-secondary" (click)="proximaPagina()" [disabled]="paginaAtual === totalPaginas">Próxima</button>
+    </div>
+  </div>
+</div>

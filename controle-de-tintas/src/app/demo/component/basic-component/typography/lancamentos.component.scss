@@ -1,0 +1,97 @@
+/* Estilo para os botões ativos */
+.btn-group .btn.active {
+    background-color: #002752 !important; // Cor mais escura para indicar ativo
+    border-color: #001a40 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Esconde os formulários por padrão */
+  .form-container {
+    display: block;
+  }
+
+  .btn-group .btn {
+    margin-right: 8px; // Espaçamento entre os botões
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .btn-group .btn:hover {
+    background-color: #004085 !important; // Cor mais escura no hover
+    color: #ffffff !important; // Mantém o texto branco para melhor contraste
+  }
+  
+/* Estilos para aplicar a cor de fundo do label */
+.label-2171 {
+    background-color: #FFEB3B; /* Amarelo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+  }
+  
+  .label-2172 {
+    background-color: #E91E63; /* Magenta */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .label-2173 {
+    background-color: #03A9F4; /* Cyan */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .label-2174 {
+    background-color: #000000; /* Preto */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  /* Estilo adicional para melhorar a visibilidade do label */
+  .form-check-label {
+    cursor: pointer;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all; /* bloqueia clique em tudo */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    width: 200px; /* Ajuste o tamanho desejado */
+    justify-content: center;
+    pointer-events: auto; /* permite clique dentro do modal, se precisar */
+  }
+  
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
