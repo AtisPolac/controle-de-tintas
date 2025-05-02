@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build:tintas": "ng build --configuration production"
+    "build:tintas": "ng build controle-de-tintas --configuration production"
   },
   "keywords": [],
   "author": "",
