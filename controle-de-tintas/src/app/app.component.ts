@@ -16,6 +16,6 @@ export class AppComponent {
 
   constructor() {}
   // public props
-  title = 'mantis-free-version';
+  title = 'controle-de-tintas';
   
 }
