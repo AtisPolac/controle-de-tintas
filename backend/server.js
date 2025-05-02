@@ -25,7 +25,7 @@ app.use(express.json());
 const tintasPath = path.join(__dirname, '../controle-de-tintas/dist');
 
 // Serve os arquivos estáticos nas rotas
-app.use('/tintas', express.static(tintasPath));
+app.use('/tintas', express.static(frontEndPath));
 app.use(express.static(path.join(__dirname, '../controle-de-tintas/dist')));
 
 // Fallback para /fretes

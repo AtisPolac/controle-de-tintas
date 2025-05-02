@@ -33,7 +33,7 @@ export class ForgetPasswordComponent {
     this.carregando = true;
 
     // Chamando o backend para enviar o e-mail com o link de redefinição
-    this.http.post('http://192.168.8.47:3000/api/auth/forgotpassword', { email: this.email })
+    this.http.post('https:/controle-de-tintas-production.up.railway.app/api/auth/forgotpassword', { email: this.email })
       .subscribe({
         next: (res: any) => {
           this.toastr.success(res.mensagem || 'Instruções enviadas com sucesso! Verifique seu e-mail.');
