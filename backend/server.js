@@ -10,6 +10,7 @@ const path = require('path');
 const os = require('os');
 
 const authRoutes = require('./rotas/auth');
+const TintasRoutes = require('./rotas/tintas');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -99,6 +100,7 @@ app.post('/api/medicao', (req, res) => {
 
 // APIs de login (usadas só pelo controle-de-tintas)
 app.use('/api/auth', authRoutes);
+app.use('/api/tintas', TintasRoutes);
 
 
 // Inicialização do servidor
