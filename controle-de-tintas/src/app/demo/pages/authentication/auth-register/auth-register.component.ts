@@ -81,7 +81,7 @@ export class AuthRegisterComponent {
   
     this.carregando = true;
   
-    this.http.post('https:/controle-de-tintas-production.up.railway.app/api/auth/register', payload)
+    this.http.post('https:/api/auth/register', payload)
       .subscribe({
         next: (res: any) => {
           this.toastr.success(res.mensagem || 'Cadastro iniciado! Verifique seu e-mail.');

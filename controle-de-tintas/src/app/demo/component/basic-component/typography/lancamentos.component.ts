@@ -192,7 +192,7 @@ export class LancamentosComponent implements AfterViewInit {
 
     this.carregando = true;
   
-    fetch('https:/controle-de-tintas-production.up.railway.app/api/tintas/abastecimento', {
+    fetch('https:/api/tintas/abastecimento', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(this.abastecimento)
@@ -239,7 +239,7 @@ export class LancamentosComponent implements AfterViewInit {
   this.carregando = true;
   this.medicao.user = `${this.user?.username ?? ''} ${this.user?.surname ?? ''}`.trim();
 
-  fetch('https:/controle-de-tintas-production.up.railway.app/api/tintas/medicao', {
+  fetch('https:/api/tintas/medicao', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(this.medicao)

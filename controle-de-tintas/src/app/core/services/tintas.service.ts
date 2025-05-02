@@ -45,7 +45,7 @@ interface ConsumptionRate {
   providedIn: 'root',
 })
 export class TintasService {
-  private baseUrl = 'https:/controle-de-tintas-production.up.railway.app/api/tintas'; // ajuste conforme seu backend
+  private baseUrl = 'https:/api/tintas'; // ajuste conforme seu backend
 
   constructor(private http: HttpClient) {}
 
@@ -59,10 +59,10 @@ export class TintasService {
 
    // novos métodos
   getEstoqueOffset(): Observable<Estoque[]> {
-    return this.http.get<Estoque[]>('https:/controle-de-tintas-production.up.railway.app/api/tintas/estoque_offset');
+    return this.http.get<Estoque[]>('https:/api/tintas/estoque_offset');
   }
   getEstoquePlana(): Observable<Estoque[]> {
-    return this.http.get<Estoque[]>('https:/controle-de-tintas-production.up.railway.app/api/tintas/estoque_plana');
+    return this.http.get<Estoque[]>('https:/api/tintas/estoque_plana');
   }
 
   private getConsumptionRates(): Observable<ConsumptionRate[]> {

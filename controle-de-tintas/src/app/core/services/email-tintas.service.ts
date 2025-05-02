@@ -18,7 +18,7 @@ const subject = `Estoque de Tintas: ${data} - ${hora}`;
 
 @Injectable({ providedIn: 'root' })
 export class EmailTintasService {
-  private readonly API = 'https:/controle-de-tintas-production.up.railway.app/api/tintas/send-report';
+  private readonly API = 'https:/api/tintas/send-report';
 
   constructor(private http: HttpClient) {}
 

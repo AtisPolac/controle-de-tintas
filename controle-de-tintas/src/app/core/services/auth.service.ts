@@ -20,11 +20,11 @@ export class AuthService {
 
   redefinirSenha(token: string, novaSenha: string): Observable<any> {
     const body = { token, novaSenha };
-    return this.http.post('https:/controle-de-tintas-production.up.railway.app/api/auth/redefinir-senha', body);
+    return this.http.post('https:/api/auth/redefinir-senha', body);
   }
 
   verificarToken(token: string) {
-    return this.http.get<{ valido: boolean }>(`https:/controle-de-tintas-production.up.railway.app/api/auth/verificar-token/${token}`);
+    return this.http.get<{ valido: boolean }>(`https:/api/auth/verificar-token/${token}`);
   }
 
   private currentUser: User | null = null;
@@ -33,7 +33,7 @@ export class AuthService {
 
   // Faz login no backend
   login(email: string, password: string): Observable<any> {
-    return this.http.post('https:/controle-de-tintas-production.up.railway.app/api/auth/login', { email, password });
+    return this.http.post('https:/api/auth/login', { email, password });
   }
 
   // Salva dados do usuário logado
