@@ -1,6 +1,5 @@
-// Angular import
 import { CommonModule } from '@angular/common';
-import { Component, inject, input, output } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 
 // project import
 
@@ -16,11 +15,11 @@ import { MenuUnfoldOutline, MenuFoldOutline, SearchOutline } from '@ant-design/i
 })
 export class NavLeftComponent {
   private iconService = inject(IconService);
-
+  
   // public props
-  navCollapsed = input.required<boolean>();
-  NavCollapse = output();
-  NavCollapsedMob = output();
+  @Input() navCollapsed: boolean = false; // Indica se a navegação está colapsada
+  @Output() NavCollapse = new EventEmitter<void>(); // Emite um evento quando o menu colapsar
+  @Output() NavCollapsedMob = new EventEmitter<void>(); // Evento para colapsar o menu em dispositivos móveis
   windowWidth: number;
 
   // Constructor
@@ -31,6 +30,7 @@ export class NavLeftComponent {
 
   // public method
   navCollapse() {
-    this.NavCollapse.emit();
+    this.navCollapsed = !this.navCollapsed; // Inverte o estado de colapso do menu
+    this.NavCollapse.emit(); // Emite o evento para notificar o componente pai
   }
 }

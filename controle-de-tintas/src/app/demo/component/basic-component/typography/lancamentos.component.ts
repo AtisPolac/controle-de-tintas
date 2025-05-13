@@ -8,6 +8,7 @@ import { EmailTintasService, MailAttachment  } from 'src/app/core/services/email
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { InkConsumptionGaugeComponent } from "../../../../theme/shared/apexchart/ink-consumption-gauge/ink-consumption-gauge.component";
 import html2canvas from 'html2canvas';
+import { NavLeftComponent } from 'src/app/theme/layouts/admin-layout/nav-bar/nav-left/nav-left.component'; // Importa o componente
 
 
 @Component({
@@ -23,6 +24,8 @@ export class LancamentosComponent implements AfterViewInit {
   @ViewChild('gaugeRoot', { static: true }) gaugeRoot!: ElementRef<HTMLDivElement>;
   @ViewChild(InkConsumptionGaugeComponent)
   private gaugeComp!: InkConsumptionGaugeComponent;
+  @ViewChild(NavLeftComponent) navLeftComponent: NavLeftComponent;
+
 
   user: any = null; // Armazena os dados do usuário
 
@@ -86,9 +89,18 @@ export class LancamentosComponent implements AfterViewInit {
 
   
 
-  ngAfterViewInit() {
-    // opcional: garantir que os gauges já foram inicializados
-    //this.enviarRelatorioPorEmail()
+ngAfterViewInit() {
+    // Quando o carregamento for true, chama o método de colapsar o menu
+    if (this.carregando) {
+      this.navLeftComponent.navCollapse();
+    }
+  }
+
+  setCarregando(status: boolean) {
+    this.carregando = status;
+    if (status) {
+      this.navLeftComponent.navCollapse();
+    }
   }
 
   async enviarRelatorioPorEmail(): Promise<void> {
