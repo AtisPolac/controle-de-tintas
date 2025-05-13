@@ -8,8 +8,8 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 
-const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0'
+//const PORT = process.env.PORT || 3000;
+const HOST = process.env.RAILWAY_PUBLIC_DOMAIN || '0.0.0.0';
 
 
 
@@ -127,7 +127,7 @@ router.post('/register', async (req, res) => {
         [nome, sobrenome, funcao, email, hash, token], (err) => {
           if (err) return res.status(500).json({ mensagem: "Erro ao cadastrar." });
   
-          const link = `http://${HOST}:${PORT}/api/auth/verify?token=${token}`;
+          const link = `http://${HOST}/api/auth/verify?token=${token}`;
           const mailOptions = {
             from: '"Controle de Tintas" <procedimentos@esdeva.com.br>',
             to: email,
@@ -241,7 +241,7 @@ router.get('/verify', (req, res) => {
                 <div class="container">
                   <h1>Cadastro Confirmado!</h1>
                   <p>Sua conta foi ativada com sucesso. Você já pode fazer login no sistema.</p>
-                  <a href="http://${HOST}:${PORT}/tintas/login">Ir para Login</a>
+                  <a href="http://${HOST}/tintas/login">Ir para Login</a>
                 </div>
               </body>
             </html>
@@ -265,7 +265,7 @@ router.post('/forgotpassword', (req, res) => {
     const token = jwt.sign({ email: row.email }, 'segredo_do_token', { expiresIn: '1h' });
 
     // Criar o link de recuperação
-    const recoveryLink = `http://${HOST}:${PORT}/tintas/redefinir-senha/${token}`;
+    const recoveryLink = `http://${HOST}/tintas/redefinir-senha/${token}`;
 
     // Enviar o e-mail com HTML personalizado
     const mailOptions = {
