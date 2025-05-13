@@ -105,7 +105,7 @@ export class InkConsumptionGaugeComponent implements OnInit, OnDestroy {
       next: (data) => {
         if (data?.length) {
           const latest = data.reduce((p, c) =>
-            new Date(c.dataRegistro) > new Date(p.dataRegistro) ? c : p
+            new Date(c.dataregistro) > new Date(p.dataregistro) ? c : p
           );
           this.initGauges(latest);
           this.setUltimaAtualizacao(latest);
@@ -150,7 +150,7 @@ export class InkConsumptionGaugeComponent implements OnInit, OnDestroy {
   }
 
   private setUltimaAtualizacao(measure: any) {
-    const data = new Date(measure.dataRegistro);
+    const data = new Date(measure.dataregistro);
     const hora = measure.hora || '00:00';
 
     const dataFormatada = `${data.getDate().toString().padStart(2, '0')}/` +
@@ -206,7 +206,7 @@ export class InkConsumptionGaugeComponent implements OnInit, OnDestroy {
       tap(data => {
         if (data?.length) {
           const latest = data.reduce((p, c) =>
-            new Date(c.dataRegistro) > new Date(p.dataRegistro) ? c : p
+            new Date(c.dataregistro) > new Date(p.dataregistro) ? c : p
           );
           this.initGauges(latest);
           this.setUltimaAtualizacao(latest);

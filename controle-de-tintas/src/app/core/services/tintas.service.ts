@@ -12,14 +12,14 @@ interface Medicao {
   black: number;
   hora: string;          // "HH:mm"
   user: string;
-  dataRegistro: string;  // ISO string
+  dataregistro: string;  // ISO string
 }
 
 interface Abastecimento {
   id: number;
   tinta: 'yellow'|'magenta'|'cyan'|'black';
   quantidadeAbastecida: number; // em kg
-  dataRegistro: string;         // ISO string
+  dataregistro: string;         // ISO string
 }
 
 export interface Estoque {
@@ -30,7 +30,7 @@ export interface Estoque {
   preto: number;
   hora: string;
   user: string;
-  dataRegistro: string;
+  dataregistro: string;
 }
 
 interface ConsumptionRate {
@@ -71,8 +71,8 @@ export class TintasService {
       abastecimentos: this.getAbastecimentos()
     }).pipe(
       map(({ medicoes, abastecimentos }) => {
-        medicoes.sort((a, b) => new Date(a.dataRegistro).getTime() - new Date(b.dataRegistro).getTime());
-        abastecimentos.sort((a, b) => new Date(a.dataRegistro).getTime() - new Date(b.dataRegistro).getTime());
+        medicoes.sort((a, b) => new Date(a.dataregistro).getTime() - new Date(b.dataregistro).getTime());
+        abastecimentos.sort((a, b) => new Date(a.dataregistro).getTime() - new Date(b.dataregistro).getTime());
 
         const calcStoredKg = (cm: number, color: keyof ConsumptionRate['byColor']): number => {
           const TANK_HEIGHT = 134, TAPE = 11, BOCAL = 2;
@@ -85,13 +85,13 @@ export class TintasService {
         const rates: ConsumptionRate[] = [];
         for (let i = 0; i < medicoes.length - 1; i++) {
           const cur = medicoes[i], next = medicoes[i + 1];
-          const t0 = new Date(cur.dataRegistro), t1 = new Date(next.dataRegistro);
+          const t0 = new Date(cur.dataregistro), t1 = new Date(next.dataregistro);
           const hours = (t1.getTime() - t0.getTime()) / 3_600_000;
           if (hours <= 0) continue;
 
           const sums = { yellow: 0, magenta: 0, cyan: 0, black: 0 };
           for (const ab of abastecimentos) {
-            const ta = new Date(ab.dataRegistro);
+            const ta = new Date(ab.dataregistro);
             if (ta > t0 && ta <= t1) sums[ab.tinta] += ab.quantidadeAbastecida;
           }
 

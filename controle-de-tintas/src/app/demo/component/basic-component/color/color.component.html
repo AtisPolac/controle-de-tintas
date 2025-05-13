@@ -47,8 +47,8 @@
               <th class="col-id" (click)="ordenar('id')" style="padding: 10px;">
                 Nº&nbsp;{{ ordemColuna === 'id' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
-              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding: 10px;">
-                Data&nbsp;{{ ordemColuna === 'dataRegistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              <th class="col-dataRegistro" (click)="ordenar('dataregistro')" style="padding: 10px;">
+                Data&nbsp;{{ ordemColuna === 'dataregistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
               <th class="col-tinta" (click)="ordenar('tinta')" style="padding: 10px;">
                 Tinta&nbsp;{{ ordemColuna === 'tinta' ? (ordemAscendente ? '▲' : '▼') : '' }}
@@ -56,14 +56,14 @@
               <th class="col-lote" (click)="ordenar('lote')" style="padding: 10px;">
                 Lote&nbsp;{{ ordemColuna === 'lote' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
-              <th class="col-pesoBruto" (click)="ordenar('pesoBruto')" style="padding: 10px;">
-                Peso Bruto&nbsp;{{ ordemColuna === 'pesoBruto' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              <th class="col-pesoBruto" (click)="ordenar('pesobruto')" style="padding: 10px;">
+                Peso Bruto&nbsp;{{ ordemColuna === 'pesobruto' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
-              <th (click)="ordenar('pesoLiquido')" style="padding: 10px;">
-                Peso Líquido&nbsp;{{ ordemColuna === 'pesoLiquido' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              <th (click)="ordenar('pesoliquido')" style="padding: 10px;">
+                Peso Líquido&nbsp;{{ ordemColuna === 'pesoliquido' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
-              <th class="col-quantidadeAbastecida" (click)="ordenar('quantidadeAbastecida')" style="padding: 10px;">
-                Qtd Abastecida&nbsp;{{ ordemColuna === 'quantidadeAbastecida' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              <th class="col-quantidadeAbastecida" (click)="ordenar('quantidadeabastecida')" style="padding: 10px;">
+                Qtd Abastecida&nbsp;{{ ordemColuna === 'quantidadeabastecida' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
               <th class="col-embalagem" (click)="ordenar('embalagem')" style="padding: 10px;">
                 Embalagem&nbsp;{{ ordemColuna === 'embalagem' ? (ordemAscendente ? '▲' : '▼') : '' }}
@@ -76,7 +76,7 @@
           <tbody>
             <tr *ngFor="let item of abastecimentos.slice((paginaAtual - 1) * 50, paginaAtual * 50)">
               <td >{{ item.id }}</td>
-              <td>{{ item.dataRegistro | date:'dd/MM/yyyy HH:mm' }}</td>
+              <td>{{ item.dataregistro | date:'dd/MM/yyyy HH:mm' }}</td>
               <td>
                 <span [ngClass]="classeDaTinta(item.tinta)">
                   {{ item.tinta }}
@@ -103,8 +103,8 @@
               <th class="col-id" style="padding: 10px;" (click)="ordenar('id')">
                 Nº&nbsp;{{ ordemColuna === 'id' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
-              <th class="col-datamed" style="padding: 10px;" (click)="ordenar('dataRegistro')">
-                Data&nbsp;{{ ordemColuna === 'dataRegistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
+              <th class="col-datamed" style="padding: 10px;" (click)="ordenar('dataregistro')">
+                Data&nbsp;{{ ordemColuna === 'dataregistro' ? (ordemAscendente ? '▲' : '▼') : '' }}
               </th>
               <th class="col-hora" style="padding: 10px;" (click)="ordenar('hora')">
                 Hora&nbsp;{{ ordemColuna === 'hora' ? (ordemAscendente ? '▲' : '▼') : '' }}
@@ -129,7 +129,7 @@
           <tbody>
             <tr *ngFor="let item of medicoes.slice((paginaAtual - 1) * 50, paginaAtual * 50)">
               <td style="padding: 10px;">{{ item.id }}</td>
-              <td style="padding: 10px;">{{ item.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding: 10px;">{{ item.dataregistro | date:'dd/MM/yyyy' }}</td>
               <td style="padding: 10px;">{{ item.hora }}</td>
               <td style="padding: 10px;">{{ item.yellow }}</td>
               <td style="padding: 10px;">{{ item.magenta }}</td>
@@ -151,8 +151,8 @@
               <th class="col-id" (click)="ordenar('id')" style="padding:10px;">
                 # {{ ordemColuna==='id'? (ordemAscendente?'▲':'▼') : '' }}
               </th>
-              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding:10px;">
-                Data {{ ordemColuna==='dataRegistro'? (ordemAscendente?'▲':'▼') : '' }}
+              <th class="col-dataRegistro" (click)="ordenar('dataregistro')" style="padding:10px;">
+                Data {{ ordemColuna==='dataregistro'? (ordemAscendente?'▲':'▼') : '' }}
               </th>
               <th class="col-hora" (click)="ordenar('hora')" style="padding:10px;">
                 Hora {{ ordemColuna==='hora'? (ordemAscendente?'▲':'▼') : '' }}
@@ -177,7 +177,7 @@
           <tbody>
             <tr *ngFor="let e of estoquesOffset.slice((paginaAtual-1)*50, paginaAtual*50)">
               <td style="padding:10px;">{{ e.id }}</td>
-              <td style="padding:10px;">{{ e.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding:10px;">{{ e.dataregistro | date:'dd/MM/yyyy' }}</td>
               <td style="padding:10px;">{{ e.hora }}</td>
               <td style="padding:10px;">{{ e.amarelo }}</td>
               <td style="padding:10px;">{{ e.magenta }}</td>
@@ -199,8 +199,8 @@
               <th class="col-id" (click)="ordenar('id')" style="padding:10px;">
                 # {{ ordemColuna==='id'? (ordemAscendente?'▲':'▼') : '' }}
               </th>
-              <th class="col-dataRegistro" (click)="ordenar('dataRegistro')" style="padding:10px;">
-                Data {{ ordemColuna==='dataRegistro'? (ordemAscendente?'▲':'▼') : '' }}
+              <th class="col-dataRegistro" (click)="ordenar('dataregistro')" style="padding:10px;">
+                Data {{ ordemColuna==='dataregistro'? (ordemAscendente?'▲':'▼') : '' }}
               </th>
               <th class="col-hora" (click)="ordenar('hora')" style="padding:10px;">
                 Hora {{ ordemColuna==='hora'? (ordemAscendente?'▲':'▼') : '' }}
@@ -225,7 +225,7 @@
           <tbody>
             <tr *ngFor="let e of estoquesPlana.slice((paginaAtual-1)*50, paginaAtual*50)">
               <td style="padding:10px;">{{ e.id }}</td>
-              <td style="padding:10px;">{{ e.dataRegistro | date:'dd/MM/yyyy' }}</td>
+              <td style="padding:10px;">{{ e.dataregistro | date:'dd/MM/yyyy' }}</td>
               <td style="padding:10px;">{{ e.hora }}</td>
               <td style="padding:10px;">{{ e.amarelo }}</td>
               <td style="padding:10px;">{{ e.magenta }}</td>
