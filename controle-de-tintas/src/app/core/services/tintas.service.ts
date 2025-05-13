@@ -18,7 +18,7 @@ interface Medicao {
 interface Abastecimento {
   id: number;
   tinta: 'yellow'|'magenta'|'cyan'|'black';
-  quantidadeAbastecida: number; // em kg
+  quantidadeabastecida: number; // em kg
   dataregistro: string;         // ISO string
 }
 
@@ -92,7 +92,7 @@ export class TintasService {
           const sums = { yellow: 0, magenta: 0, cyan: 0, black: 0 };
           for (const ab of abastecimentos) {
             const ta = new Date(ab.dataregistro);
-            if (ta > t0 && ta <= t1) sums[ab.tinta] += ab.quantidadeAbastecida;
+            if (ta > t0 && ta <= t1) sums[ab.tinta] += ab.quantidadeabastecida;
           }
 
           const byColor = {} as ConsumptionRate['byColor'];

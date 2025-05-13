@@ -37,12 +37,12 @@ export class LancamentosComponent implements AfterViewInit {
   // Dados para o formulário de abastecimento
   abastecimento: any = {
     tinta: '',
-    pesoBruto: null,
-    pesoLiquido: null,
-    quantidadeAbastecida: null,
+    pesobruto: null,
+    pesoliquido: null,
+    quantidadeabastecida: null,
     embalagem: '',
     lote: '',
-    pesoDescarte: null,
+    pesodescarte: null,
     observacoes: '',
     avaliacao: 0,
     user: null,
@@ -165,15 +165,15 @@ export class LancamentosComponent implements AfterViewInit {
       this.toastr.error("Selecione uma tinta para o abastecimento!");
       return;
     }
-    if (!this.abastecimento.pesoBruto || this.abastecimento.pesoBruto <= 0) {
+    if (!this.abastecimento.pesobruto || this.abastecimento.pesobruto <= 0) {
       this.toastr.error("Informe um peso bruto válido (maior que zero)!");
       return;
     }
-    if (!this.abastecimento.pesoLiquido || this.abastecimento.pesoLiquido <= 0) {
+    if (!this.abastecimento.pesoliquido || this.abastecimento.pesoliquido <= 0) {
       this.toastr.error("Informe um peso líquido válido (maior que zero)!");
       return;
     }
-    if (!this.abastecimento.quantidadeAbastecida || this.abastecimento.quantidadeAbastecida <= 0) {
+    if (!this.abastecimento.quantidadeabastecida || this.abastecimento.quantidadeabastecida <= 0) {
       this.toastr.error("Informe uma quantidade abastecida válida (maior que zero)!");
       return;
     }
@@ -203,15 +203,15 @@ export class LancamentosComponent implements AfterViewInit {
         // Limpa os dados
         this.abastecimento = {
           tinta: '',
-          pesoBruto: null,
-          pesoLiquido: null,
-          quantidadeAbastecida: null,
+          pesobruto: null,
+          pesoliquido: null,
+          quantidadeabastecida: null,
           embalagem: '',
           lote: '',
-          pesoDescarte: null,
+          pesodescarte: null,
           observacoes: '',
-          centralLimpa: false,
-          muitosTambores: false,
+          centrallimpa: false,
+          muitostambores: false,
           avaliacao: 0,
           user: `${this.user?.username ?? ''} ${this.user?.surname ?? ''}`.trim()
         };

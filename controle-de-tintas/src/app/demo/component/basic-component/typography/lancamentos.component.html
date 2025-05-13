@@ -48,19 +48,19 @@
         <!-- Peso bruto do rótulo -->
         <div class="mb-3">
           <label for="inputPesoBruto" class="form-label">Peso Bruto do Rótulo (kg)</label>
-          <input type="number" min="0" class="form-control" id="inputPesoBruto" name="pesoBruto" [(ngModel)]="abastecimento.pesoBruto" required placeholder="Digite o peso bruto do rótulo">
+          <input type="number" min="0" class="form-control" id="inputPesoBruto" name="pesobruto" [(ngModel)]="abastecimento.pesobruto" required placeholder="Digite o peso bruto do rótulo">
         </div>
 
         <!-- Peso líquido do rótulo -->
         <div class="mb-3">
           <label for="inputPesoLiquido" class="form-label">Peso Líquido do Rótulo (kg)</label>
-          <input type="number" min="0" class="form-control" id="inputPesoLiquido" name="pesoLiquido" [(ngModel)]="abastecimento.pesoLiquido" required placeholder="Digite o peso líquido do rótulo">
+          <input type="number" min="0" class="form-control" id="inputPesoLiquido" name="pesoliquido" [(ngModel)]="abastecimento.pesoliquido" required placeholder="Digite o peso líquido do rótulo">
         </div>
 
         <!-- Quantidade abastecida -->
         <div class="mb-3">
           <label for="inputQuantidadeAbastecida" class="form-label">Quantidade Abastecida (kg)</label>
-          <input type="number" min="0" class="form-control" id="inputQuantidadeAbastecida" name="quantidadeAbastecida" [(ngModel)]="abastecimento.quantidadeAbastecida" required placeholder="Digite a quantidade abastecida">
+          <input type="number" min="0" class="form-control" id="inputQuantidadeAbastecida" name="quantidadeabastecida" [(ngModel)]="abastecimento.quantidadeabastecida" required placeholder="Digite a quantidade abastecida">
         </div>
 
         <!-- Embalagem do produto -->
@@ -87,7 +87,7 @@
         <!-- Peso do descarte -->
         <div class="mb-3">
           <label for="inputPesoDescarte" class="form-label">Peso do Descarte (kg)</label>
-          <input type="number" min="0" class="form-control" id="inputPesoDescarte" name="pesoDescarte" [(ngModel)]="abastecimento.pesoDescarte" placeholder="Digite o peso do descarte">
+          <input type="number" min="0" class="form-control" id="inputPesoDescarte" name="pesodescarte" [(ngModel)]="abastecimento.pesodescarte" placeholder="Digite o peso do descarte">
         </div>
 
 
@@ -96,13 +96,13 @@
           <label class="form-label">Observações sobre a Central de Tintas</label>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="centralLimpa" [(ngModel)]="abastecimento.centralLimpa" name="centralLimpa">
-            <label class="form-check-label" for="centralLimpa">Central está limpa?</label>
+            <input type="checkbox" class="form-check-input" id="centrallimpa" [(ngModel)]="abastecimento.centrallimpa" name="centrallimpa">
+            <label class="form-check-label" for="centrallimpa">Central está limpa?</label>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="muitosTambores" [(ngModel)]="abastecimento.muitosTambores" name="muitosTambores">
-            <label class="form-check-label" for="muitosTambores">Temos muitos tambores na central?</label>
+            <input type="checkbox" class="form-check-input" id="muitostambores" [(ngModel)]="abastecimento.muitostambores" name="muitostambores">
+            <label class="form-check-label" for="muitostambores">Temos muitos tambores na central?</label>
           </div>
         </div>
 

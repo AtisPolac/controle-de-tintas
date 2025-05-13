@@ -60,21 +60,21 @@ const db = new sqlite3.Database(dbPath);
 // Inserir abastecimento
 app.post('/api/abastecimento', (req, res) => {
   const {
-    tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-    lote, pesoDescarte, observacoes, centralLimpa, muitosTambores, avaliacao
+    tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+    lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao
   } = req.body;
 
   const stmt = `
     INSERT INTO abastecimentos (
-      tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-      lote, pesoDescarte, observacoes, centralLimpa, muitosTambores, avaliacao
+      tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+      lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   db.run(stmt, [
-    tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-    lote, pesoDescarte || 0, observacoes || '', centralLimpa ? 1 : 0,
-    muitosTambores ? 1 : 0, avaliacao || 0
+    tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+    lote, pesodescarte || 0, observacoes || '', centrallimpa ? 1 : 0,
+    muitostambores ? 1 : 0, avaliacao || 0
   ], function(err) {
     if (err) return res.status(500).send('Erro ao inserir abastecimento');
     res.sendStatus(200);

@@ -15,28 +15,28 @@ const pool = new Pool({
 // Inserir abastecimento
 router.post('/abastecimento', async (req, res) => {
   const {
-    tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-    lote, pesoDescarte, observacoes, centralLimpa, muitosTambores, avaliacao, user
+    tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+    lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao, user
   } = req.body;
 
   // Validação básica
-  if (!tinta || !pesoBruto || !pesoLiquido || !quantidadeAbastecida || !embalagem || !user) {
+  if (!tinta || !pesobruto || !pesoliquido || !quantidadeabastecida || !embalagem || !user) {
     return res.status(400).json({ mensagem: 'Campos obrigatórios faltando' });
   }
 
   const query = `
     INSERT INTO abastecimentos (
-      tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-      lote, pesoDescarte, observacoes, centralLimpa, muitosTambores, avaliacao, user
+      tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+      lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao, user
     ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     RETURNING id
   `;
 
   try {
     await pool.query(query, [
-      tinta, pesoBruto, pesoLiquido, quantidadeAbastecida, embalagem,
-      lote || null, pesoDescarte || 0, observacoes || '', !!centralLimpa,
-      !!muitosTambores, avaliacao || 0, user.toUpperCase()
+      tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
+      lote || null, pesodescarte || 0, observacoes || '', !!centrallimpa,
+      !!muitostambores, avaliacao || 0, user.toUpperCase()
     ]);
     res.status(200).json({ mensagem: 'Abastecimento inserido com sucesso' });
   } catch (err) {
