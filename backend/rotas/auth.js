@@ -9,8 +9,12 @@ require('dotenv').config();
 
 // Configura a conexão com o PostgreSQL usando DATABASE_URL do Railway
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+   ssl: {
     rejectUnauthorized: false // Necessário para conexões no Railway
   }
 });
