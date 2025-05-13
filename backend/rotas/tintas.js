@@ -27,7 +27,7 @@ router.post('/abastecimento', async (req, res) => {
   const query = `
     INSERT INTO abastecimentos (
       tinta, pesobruto, pesoliquido, quantidadeabastecida, embalagem,
-      lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao, user
+      lote, pesodescarte, observacoes, centrallimpa, muitostambores, avaliacao, "user"
     ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     RETURNING id
   `;
@@ -182,7 +182,7 @@ router.post('/send-report', async (req, res) => {
 
     await transporter.sendMail({
       from: '"Controle de Tintas" <procedimentos@esdeva.com.br>',
-      to: 'andrey.souza@esdeva.com.br',//arthur.oliveira@esdeva.com.br,salatiel.silva@esdeva.com.br,compras@esdeva.com.br,planejamento@esdeva.com.br,programacao@esdeva.com.br,almoxarifado3@esdeva.com.br,guilherme.bento@esdeva.com.br',
+      to: 'andrey.souza@esdeva.com.br, arthur.oliveira@esdeva.com.br,salatiel.silva@esdeva.com.br,compras@esdeva.com.br,planejamento@esdeva.com.br,programacao@esdeva.com.br,almoxarifado3@esdeva.com.br,guilherme.bento@esdeva.com.br',
       subject,
       html,
       attachments
