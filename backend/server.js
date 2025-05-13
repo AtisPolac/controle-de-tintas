@@ -13,8 +13,8 @@ const authRoutes = require('./rotas/auth');
 const TintasRoutes = require('./rotas/tintas');
 
 const app = express();
+const HOST = process.env.RAILWAY_PUBLIC_DOMAIN || '0.0.0.0';
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0'
 
 // Middlewares
 app.use(cors());
