@@ -140,7 +140,7 @@ router.post('/register', async (req, res) => {
     await pool.query(
       `INSERT INTO usuarios (username, surname, role, email, senha, verificado, token_verificacao)
        VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-      [nome, sobrenome, funcao, email, hash, false, token]
+      [nome, sobrenome, funcao, email, hash, 0, token]
     );
 
     const link = `http://${HOST}/api/auth/verify?token=${token}`;
