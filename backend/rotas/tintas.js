@@ -71,7 +71,7 @@ router.post('/medicao', async (req, res) => {
       // Inserir medição
       const insertMedicao = `
         INSERT INTO medicoes (
-          yellow, magenta, cyan, black, hora, user
+          yellow, magenta, cyan, black, hora, "user"
         ) VALUES ($1, $2, $3, $4, $5, $6)
       `;
       await client.query(insertMedicao, [
@@ -81,7 +81,7 @@ router.post('/medicao', async (req, res) => {
       // Inserir estoque offset
       const insertOffset = `
         INSERT INTO estoque_offset (
-          amarelo, magenta, ciano, preto, hora, user
+          amarelo, magenta, ciano, preto, hora, "user"
         ) VALUES ($1, $2, $3, $4, $5, $6)
       `;
       await client.query(insertOffset, [
@@ -93,7 +93,7 @@ router.post('/medicao', async (req, res) => {
       // Inserir estoque plana
       const insertPlana = `
         INSERT INTO estoque_plana (
-          amarelo, magenta, ciano, preto, hora, user
+          amarelo, magenta, ciano, preto, hora, "user"
         ) VALUES ($1, $2, $3, $4, $5, $6)
       `;
       await client.query(insertPlana, [
