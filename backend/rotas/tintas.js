@@ -182,7 +182,7 @@ router.post('/send-report', async (req, res) => {
 
     await transporter.sendMail({
       from: '"Controle de Tintas" <procedimentos@esdeva.com.br>',
-      to: 'andrey.souza@esdeva.com.br,arthur.oliveira@esdeva.com.br,salatiel.silva@esdeva.com.br,compras@esdeva.com.br,planejamento@esdeva.com.br,programacao@esdeva.com.br,almoxarifado3@esdeva.com.br,guilherme.bento@esdeva.com.br',
+      to: 'andrey.souza@esdeva.com.br',//arthur.oliveira@esdeva.com.br,salatiel.silva@esdeva.com.br,compras@esdeva.com.br,planejamento@esdeva.com.br,programacao@esdeva.com.br,almoxarifado3@esdeva.com.br,guilherme.bento@esdeva.com.br',
       subject,
       html,
       attachments
