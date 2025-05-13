@@ -84,6 +84,8 @@ export class LancamentosComponent implements AfterViewInit {
 
   }
 
+  
+
   ngAfterViewInit() {
     // opcional: garantir que os gauges já foram inicializados
     //this.enviarRelatorioPorEmail()
@@ -91,6 +93,11 @@ export class LancamentosComponent implements AfterViewInit {
 
   async enviarRelatorioPorEmail(): Promise<void> {
     this.carregando = true;
+      if (this.carregando) {
+        document.body.classList.add('modal-open');
+      } else {
+        document.body.classList.remove('modal-open');
+      }
     try {
       // 1) Garante que o gauge seja recarregado com os dados MAIS ATUAIS:
       await this.gaugeComp.manualUpdate$().toPromise();
@@ -123,6 +130,12 @@ export class LancamentosComponent implements AfterViewInit {
       this.toastr.error('Falha ao enviar relatório.');
     } finally {
       this.carregando = false;
+
+      if (this.carregando) {
+        document.body.classList.add('modal-open');
+      } else {
+        document.body.classList.remove('modal-open');
+      }
     }
   }
 
