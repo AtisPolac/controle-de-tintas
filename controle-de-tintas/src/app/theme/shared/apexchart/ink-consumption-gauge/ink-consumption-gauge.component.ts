@@ -215,5 +215,6 @@ export class InkConsumptionGaugeComponent implements OnInit, OnDestroy {
       mapTo(void 0)
     );
   }
+
   
 }
