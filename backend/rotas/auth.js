@@ -145,7 +145,7 @@ router.post('/register', async (req, res) => {
     await pool.query(
       `INSERT INTO usuarios (username, surname, role, email, senha, verificado, token_verificacao)
        VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-      [nome, sobrenome, funcao, email, hash, 0, token]
+      [nome, sobrenome, funcao, email, hash, false, token]
     );
 
     console.log("Usuário registrado com sucesso!");
@@ -209,7 +209,7 @@ router.get('/verify', async (req, res) => {
     }
 
     // Marca o usuário como verificado
-    await pool.query('UPDATE usuarios SET verificado = TRUE, token_verificacao = NULL WHERE id = $1', [row.id]);
+    await pool.query('UPDATE usuarios SET verificado = 1, token_verificacao = NULL WHERE id = $1', [row.id]);
 
     res.send(`
       <html>
