@@ -136,12 +136,10 @@ router.post('/register', async (req, res) => {
 
     const hash = await bcrypt.hash(senha, 10);
 
-    console.log('Senha criptografada:', hash);
-
     const token = uuidv4();
 
-    console.log('Token de verificação gerado:', token);
-
+    await pool.query("SELECT setval('usuarios_id_seq', (SELECT MAX(id) FROM usuarios), true)");
+    
     await pool.query(
       `INSERT INTO usuarios (username, surname, role, email, senha, verificado, token_verificacao)
        VALUES ($1, $2, $3, $4, $5, $6, $7)`,
