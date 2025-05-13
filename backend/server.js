@@ -13,7 +13,7 @@ const authRoutes = require('./rotas/auth');
 const TintasRoutes = require('./rotas/tintas');
 
 const app = express();
-const HOST = process.env.RAILWAY_PUBLIC_DOMAIN || '0.0.0.0';
+//const HOST = process.env.RAILWAY_PUBLIC_DOMAIN || '0.0.0.0';
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
@@ -104,8 +104,8 @@ app.use('/api/tintas', TintasRoutes);
 
 
 // Inicialização do servidor
-app.listen(PORT, HOST, () => {
-  console.log(`Servidor rodando em http://${HOST}:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Servidor rodando em ${PORT}`);
 });
 
   
