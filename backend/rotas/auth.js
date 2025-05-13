@@ -135,7 +135,12 @@ router.post('/register', async (req, res) => {
     }
 
     const hash = await bcrypt.hash(senha, 10);
+
+    console.log('Senha criptografada:', hash);
+
     const token = uuidv4();
+
+    console.log('Token de verificação gerado:', token);
 
     await pool.query(
       `INSERT INTO usuarios (username, surname, role, email, senha, verificado, token_verificacao)
@@ -143,9 +148,11 @@ router.post('/register', async (req, res) => {
       [nome, sobrenome, funcao, email, hash, 0, token]
     );
 
+    console.log("Usuário registrado com sucesso!");
+
     const link = `http://${HOST}/api/auth/verify?token=${token}`;
     const mailOptions = {
-      from: '"Controle de Tintas" <procedimentos@esdeva.com.br>',
+      from: '"Sistemas Integrados" <procedimentos@esdeva.com.br>',
       to: email,
       subject: 'Confirme seu cadastro',
       html: `
